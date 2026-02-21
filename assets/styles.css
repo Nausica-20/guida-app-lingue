@@ -1,15 +1,6 @@
 /* ==========================================================================
-   1. VARIABILI E DESIGN SYSTEM (STILE PREMIUM 2026)
+   1. RESET E STILI BASE
    ========================================================================== */
-:root {
-    --brand-dark: #0f172a;       /* Blu Notte per testi e titoli */
-    --accent-color: #059669;      /* Verde Smeraldo (Autorevolezza) */
-    --cta-color: #fb7185;         /* Corallo Soft (Azione) */
-    --bg-crema: #fdfdfb;          /* Sfondo "Carta" per meno affaticamento */
-    --white: #ffffff;
-    --border: #e2e8f0;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -17,192 +8,214 @@
 }
 
 body {
-    font-family: 'Georgia', serif; /* Serif per un look più editoriale */
-    line-height: 1.8;
-    color: var(--brand-dark);
-    background-color: var(--bg-crema);
-    -webkit-font-smoothing: antialiased;
-}
-
-/* Font Sans-serif per elementi UI e navigazione */
-nav, header p, .cta-button, .card h2, footer {
-    font-family: 'Inter', -apple-system, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f6f9;
 }
 
 a {
     text-decoration: none;
-    transition: all 0.25s ease;
+    color: inherit;
+    transition: all 0.2s ease;
 }
 
 /* ==========================================================================
-   2. HEADER & NAVIGATION (LOOK MINIMAL)
+   2. HEADER E NAVIGAZIONE (IDENTITÀ DEL SITO)
    ========================================================================== */
 header {
-    background-color: var(--brand-dark);
-    color: var(--white);
-    padding: 80px 20px;
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    color: #fff;
+    padding: 60px 20px;
     text-align: center;
 }
 
 header h1 {
-    font-size: 3.5rem;
-    font-weight: 900;
-    letter-spacing: -2px;
-    margin-bottom: 15px;
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    font-weight: 800;
+    letter-spacing: -1px;
 }
 
 header p {
     font-size: 1.2rem;
+    opacity: 0.9;
     max-width: 600px;
     margin: 0 auto;
-    color: #94a3b8;
 }
 
 nav {
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px); /* Effetto vetro moderno */
-    border-bottom: 1px solid var(--border);
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 100;
 }
 
 nav ul {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     list-style: none;
-    padding: 20px;
-    max-width: 1200px;
+    padding: 15px 20px;
+    max-width: 1000px;
     margin: 0 auto;
 }
+
+nav ul li { margin: 0 15px; }
 
 nav ul li a {
-    font-weight: 500;
-    color: var(--brand-dark);
-    padding: 8px 15px;
+    font-weight: 600;
+    color: #475569;
+    font-size: 0.95rem;
 }
 
-nav ul li a:hover {
-    color: var(--accent-color);
-}
+nav ul li a:hover { color: #f46c25; }
 
 /* ==========================================================================
-   3. ARTICLE DESIGN (FOCUS LEGGIBILITÀ)
+   3. STRUTTURA ARTICOLI (PILLAR E RECENSIONI)
    ========================================================================== */
-main {
-    max-width: 1200px;
-    margin: 60px auto;
-    padding: 0 20px;
-}
-
 .article-container {
-    max-width: 780px;
-    margin: 0 auto;
-    background: transparent; /* Rimuoviamo il box bianco per uno stile più aperto */
-    padding: 0;
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-h1, h2, h3 {
-    font-family: 'Inter', sans-serif;
-    font-weight: 800;
-    letter-spacing: -0.5px;
-}
+.article-container h1 { font-size: 2.2rem; color: #111; margin-bottom: 20px; line-height: 1.3; }
+.article-container h2 { font-size: 1.8rem; color: #222; margin-top: 40px; margin-bottom: 15px; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; }
+.article-container h3 { font-size: 1.4rem; color: #333; margin-top: 30px; margin-bottom: 15px; }
+.article-container p { margin-bottom: 20px; font-size: 1.1rem; }
+.article-container ul, .article-container ol { margin-bottom: 20px; padding-left: 20px; }
+.article-container li { margin-bottom: 10px; font-size: 1.1rem; }
 
-.article-container h1 { font-size: 3rem; margin-bottom: 30px; }
-.article-container h2 { font-size: 2rem; margin: 50px 0 25px; color: var(--accent-color); }
-.article-container p { font-size: 1.25rem; margin-bottom: 25px; color: #334155; }
-
-/* Disclaimer */
+/* Disclaimer Affiliazione */
 .affiliate-disclosure {
-    font-family: 'Inter', sans-serif;
     font-size: 0.9rem;
-    background: #f1f5f9;
-    padding: 20px;
-    border-radius: 4px;
-    margin-bottom: 40px;
-    border-left: 2px solid var(--accent-color);
+    color: #666;
+    background-color: #f8fafc;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    font-style: italic;
+    border-left: 4px solid #cbd5e1;
 }
 
 /* ==========================================================================
-   4. CONVERSION ELEMENTS (CTA & BOX)
+   4. COMPONENTI DI CONVERSIONE (CTA E BOX)
    ========================================================================== */
 .cta-container {
     display: flex;
     justify-content: center;
-    margin: 50px 0;
+    margin: 35px 0;
+    width: 100%;
 }
 
 .cta-button {
-    background-color: var(--cta-color);
-    color: white !important;
-    padding: 22px 40px;
-    border-radius: 50px; /* Bottone a pillola, molto moderno */
-    font-size: 1.4rem;
-    font-weight: 700;
-    box-shadow: 0 10px 25px rgba(251, 113, 133, 0.3);
-    text-decoration: none !important;
+    display: inline-block;
+    width: 100%;
+    max-width: 450px;
+    background-color: #f46c25;
+    color: #ffffff !important;
+    text-align: center;
+    padding: 20px 25px;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 1.3rem;
+    box-shadow: 0 5px 15px rgba(244, 108, 37, 0.4);
 }
 
 .cta-button:hover {
-    transform: scale(1.05);
-    background-color: #f43f5e;
+    background-color: #e05a15;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(244, 108, 37, 0.6);
 }
 
-.box {
-    padding: 30px;
-    border-radius: 12px;
-    margin: 40px 0;
-    font-family: 'Inter', sans-serif;
-}
+/* Box Informativi */
+.box { padding: 20px; border-radius: 8px; margin-bottom: 25px; }
+.box-success { background-color: #e8f5e9; border-left: 5px solid #4caf50; }
+.box-danger { background-color: #ffebee; border-left: 5px solid #f44336; }
+.box-info { background-color: #e3f2fd; border-left: 5px solid #2196f3; }
+.box h3 { margin-top: 0; margin-bottom: 10px; }
 
-.box-success { background: #ecfdf5; border: 1px solid #10b981; }
-.box-danger { background: #fff1f2; border: 1px solid #f43f5e; }
-.box-info { background: #eff6ff; border: 1px solid #3b82f6; }
+/* Tabelle di confronto */
+table { width: 100%; border-collapse: collapse; margin-bottom: 30px; }
+th, td { padding: 15px; text-align: left; border-bottom: 1px solid #e2e8f0; }
+th { background-color: #f8fafc; font-weight: bold; }
 
 /* ==========================================================================
-   5. GRID & CARDS (HOMEPAGE)
+   5. GRID E CARDS (HOMEPAGE)
    ========================================================================== */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
 .card {
-    background: var(--white);
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    border-top: 4px solid transparent;
+}
+
+.card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px rgba(0,0,0,0.05); }
+.card.inglese:hover { border-top-color: #3b82f6; }
+.card.francese:hover { border-top-color: #ec4899; }
+.card.spagnolo:hover { border-top-color: #f59e0b; }
+
+.card h2 { margin-bottom: 10px; color: #1e293b; }
+.card p { color: #64748b; margin-bottom: 20px; font-size: 0.95rem; }
+.card-link { font-weight: bold; color: #2563eb; }
+
+/* Sezione Consigliati */
+.recommended {
+    background-color: #fff7ed;
     padding: 40px;
-    border-radius: 0; /* Angoli netti per stile editoriale */
-    border-bottom: 4px solid var(--border);
-    transition: all 0.3s ease;
+    border-radius: 12px;
+    border: 1px solid #fed7aa;
+    max-width: 800px;
+    margin: 40px auto;
 }
 
-.card:hover {
-    border-bottom-color: var(--accent-color);
-    background-color: var(--white);
-    transform: translateY(-5px);
+.recommended ul { list-style: none; margin-top: 20px; }
+.recommended li { margin-bottom: 15px; }
+.recommended li a {
+    display: block;
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    border-left: 4px solid #f46c25;
+    font-weight: 600;
 }
-
-.card h2 { font-size: 1.6rem; margin-bottom: 15px; }
-.card-link { color: var(--accent-color); font-weight: 700; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
 
 /* ==========================================================================
-   6. FOOTER
+   6. FOOTER E RESPONSIVE
    ========================================================================== */
-footer {
-    background-color: var(--brand-dark);
-    color: #94a3b8;
-    padding: 80px 20px;
+.site-footer {
+    background-color: #1e293b;
+    color: #cbd5e1;
     text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
 }
 
-footer a { color: var(--white); margin: 0 15px; font-weight: 600; }
-.footer-disclaimer { max-width: 700px; margin: 30px auto; font-size: 0.85rem; opacity: 0.6; }
+.site-footer a { color: #94a3b8; margin: 0 10px; font-size: 0.9rem; }
+.site-footer a:hover { color: #fff; text-decoration: underline; }
 
-/* ==========================================================================
-   7. MOBILE
-   ========================================================================== */
+.footer-separator { color: #475569; }
+
 @media (max-width: 768px) {
-    header h1 { font-size: 2.5rem; }
-    .article-container h1 { font-size: 2.2rem; }
-    .cta-button { width: 100%; font-size: 1.2rem; }
-}
+    header h1 { font-size: 2.2rem; }
+    .article-container { padding: 25px 20px; margin: 20px 15px; }
+    .cta-button { font-size: 1.1rem; }
+    nav ul { padding: 10px; }
+    nav ul li { margin: 5px 10px; }
+   }
+   
