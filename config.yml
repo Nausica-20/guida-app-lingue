@@ -2,25 +2,25 @@
 # CONFIGURAZIONE GENERALE DEL SITO
 # ==============================================================================
 title: "Language Tips"
-description: "La guida definitiva alle migliori app per imparare lingue nel 2026. Recensioni, confronti e metodi per imparare inglese, francese e spagnolo da zero."
-url: "https://nausica-20.github.io" 
-baseurl: "/guida-app-lingue"      # AGGIORNATO: Nome della tua nuova repository
+description: "Il blog di riferimento nel 2026 per imparare inglese, francese, spagnolo e tedesco con le migliori strategie e app."
+url: "https://nausica-20.github.io" # Il tuo dominio base su GitHub
+baseurl: "/guida-app-lingue"      # IL NOME DELLA TUA REPOSITORY AGGIORNATO
 
 # ==============================================================================
-# INFORMAZIONI AUTORE E SOCIAL (Ottimizzato per Pinterest)
+# INFORMAZIONI AUTORE E SOCIAL
 # ==============================================================================
 author: "Language Tips Team"
-pinterest_url: "https://pinterest.com/nausica-20" # Assicurati che sia il tuo link reale
+pinterest_url: "https://pinterest.com/nausica-20" # Il tuo profilo Pinterest
 email: "info@languages-tips.it"
 
 # ==============================================================================
-# VARIABILI AFFILIATE MARKETING
+# VARIABILI PER AFFILIATE MARKETING (Globali)
 # ==============================================================================
-# Trasparenza obbligatoria per legge e per i programmi di affiliazione
+# Richiama questa variabile con {{ site.affiliate_disclaimer }} nei tuoi articoli
 affiliate_disclaimer: "Trasparenza: questo articolo contiene link affiliati. Se decidi di effettuare un acquisto tramite i nostri link, potremmo ricevere una piccola commissione senza alcun costo aggiuntivo per te. Questo ci aiuta a mantenere il blog gratuito e indipendente."
 
-# Link centralizzato: se la promo cambia, lo modifichi qui una volta sola
-babbel_affiliate_link: "https://vostro-link-affiliato.com"
+# Link centralizzato per Babbel (comodo da aggiornare qui se cambia il link)
+babbel_link: "https://vostro-link-affiliato.com"
 
 # ==============================================================================
 # IMPOSTAZIONI TECNICHE E SEO
@@ -28,15 +28,15 @@ babbel_affiliate_link: "https://vostro-link-affiliato.com"
 markdown: kramdown
 theme: minima
 
-# Permalink SEO: trasforma i file in /categoria/titolo-articolo/ (senza .html visibile)
+# Struttura URL pulita (es: /inglese/imparare-inglese-da-zero/)
 permalink: /:categories/:title/
 
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-sitemap # Aggiunto per generare la sitemap automaticamente
+  - jekyll-sitemap # Genera automaticamente la mappa del sito per Google
 
-# Esclusioni per la compilazione di Jekyll
+# Escludi file tecnici dalla pubblicazione finale
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -44,3 +44,4 @@ exclude:
   - vendor
   - .jekyll-cache
   - .sass-cache
+
