@@ -1,0 +1,46 @@
+# ==============================================================================
+# CONFIGURAZIONE GENERALE DEL SITO
+# ==============================================================================
+title: "Language Tips"
+description: "La guida definitiva alle migliori app per imparare lingue nel 2026. Recensioni, confronti e metodi per imparare inglese, francese e spagnolo da zero."
+url: "https://nausica-20.github.io" 
+baseurl: "/guida-app-lingue"      # AGGIORNATO: Nome della tua nuova repository
+
+# ==============================================================================
+# INFORMAZIONI AUTORE E SOCIAL (Ottimizzato per Pinterest)
+# ==============================================================================
+author: "Language Tips Team"
+pinterest_url: "https://pinterest.com/nausica-20" # Assicurati che sia il tuo link reale
+email: "info@languages-tips.it"
+
+# ==============================================================================
+# VARIABILI AFFILIATE MARKETING
+# ==============================================================================
+# Trasparenza obbligatoria per legge e per i programmi di affiliazione
+affiliate_disclaimer: "Trasparenza: questo articolo contiene link affiliati. Se decidi di effettuare un acquisto tramite i nostri link, potremmo ricevere una piccola commissione senza alcun costo aggiuntivo per te. Questo ci aiuta a mantenere il blog gratuito e indipendente."
+
+# Link centralizzato: se la promo cambia, lo modifichi qui una volta sola
+babbel_affiliate_link: "https://vostro-link-affiliato.com"
+
+# ==============================================================================
+# IMPOSTAZIONI TECNICHE E SEO
+# ==============================================================================
+markdown: kramdown
+theme: minima
+
+# Permalink SEO: trasforma i file in /categoria/titolo-articolo/ (senza .html visibile)
+permalink: /:categories/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap # Aggiunto per generare la sitemap automaticamente
+
+# Esclusioni per la compilazione di Jekyll
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .jekyll-cache
+  - .sass-cache
